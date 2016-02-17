@@ -12,7 +12,8 @@ If so, run it:
 
 	`make run`
 
-* Read "[How not to loose floating IPs](http://localhost/#docs)"
-* Read the [internal documentation](http://localhost/#internal)
-* Read the [µ-Mosler setup](http://localhost/#micrmosler)
-* Read "[How to customize the dashboard](http://localhost/#dashboard)"
+Point then your browser to http://localhost or equivalent
+* Read "[How not to loose floating IPs](docs.md)"
+* Read the [internal documentation](internal.md)
+* Read the [µ-Mosler setup](micrmosler.md)
+* Read "[How to customize the dashboard](dashboard.md)"
