@@ -53,7 +53,7 @@ instructions from the
 [Openstack Liberty docs](http://docs.openstack.org/liberty/install-guide-rdo/).
 
 The public endpoints use <code
-class="special">http://knox.bils.se:_port_</code>.
+class="special">http://knox.bils.se:<port&gt;</code>.
 
 The Firewall, on the `controller`, is <code
 class="special">iptables</code>.  We ditched `firewalld`. The relevant
