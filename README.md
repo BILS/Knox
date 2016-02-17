@@ -12,6 +12,6 @@ If so, run it:
 
 	`make run`
 
-Read the Knox docs at http://localhost/#docs
-Read the Internal docs at http://localhost/#internal
-Read the µ-Mosler setup at http://localhost/#micrmosler
+* Read the "[How not to loose floating IPs](http://localhost/#docs)"
+* Read the [internal documentation](http://localhost/#internal)
+* Read the [µ-Mosler setup](http://localhost/#micrmosler)
