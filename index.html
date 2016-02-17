@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main></main>
+    <main><h1>Knox Documentation</h1></main>
 
     <script src="js/jquery-2.1.4.min.js"></script>
     <script>
@@ -17,11 +17,12 @@
 
       if(h){ main.load("./"+h+".html"); }
       else {
-      $('<ul>'+
-	'<li><a href="#docs">Saving some floating IPs</a></li>'+
+        $('<ul>'+
+      	'<li><a href="#docs">Saving some floating IPs</a></li>'+
         '<li><a href="#internal">How to use Knox</a></li>'+
-	'<li><a href="#micromosler">Booting Micromosler</a></li>'+
-	'</ul>').appendTo(main);
+        '<li><a href="#dashboard">Customizing the dashboard</a></li>'+
+      	'<li><a href="#micromosler">Booting Micromosler</a></li>'+
+      	'</ul>').appendTo(main).find('a').click(function(){window.location=$(this).attr('href');window.location.reload();});
       }
       })();
     </script>

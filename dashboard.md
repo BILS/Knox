@@ -45,6 +45,8 @@ can also first test the theme with
 	/usr/bin/python /usr/share/openstack-dashboard/manage.py collectstatic --noinput --clear
 	/usr/bin/python /usr/share/openstack-dashboard/manage.py compress --force
 
+Be careful, if the previous commands fail, the `httpd` server won't
+start, and neither will `keystone`.
 
 - - - 
 Frédéric Haziza <daz@bils.se>, December 2015.

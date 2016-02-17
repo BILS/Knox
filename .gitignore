@@ -1,0 +1,4 @@
+**/.DS_Store
+img/knox.key
+*.html
+!index.html
