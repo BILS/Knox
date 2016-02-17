@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Knox Documentation</title>
+    <link rel="stylesheet" href="css/pygments.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main></main>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+      (function(){
+      var h=window.location.hash.slice(1)
+      var main=$("main");
+
+      if(h){ main.load("./"+h+".html"); }
+      else {
+      $('<ul>'+
+	'<li><a href="#docs">Saving some floating IPs</a></li>'+
+        '<li><a href="#internal">How to use Knox</a></li>'+
+	'<li><a href="#micromosler">Booting Micromosler</a></li>'+
+	'</ul>').appendTo(main);
+      }
+      })();
+    </script>
+  </body>
+</html>
