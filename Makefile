@@ -5,17 +5,19 @@ PNGS=$(TIFFS:%.tiff=%.png)
 MD=markdown_py
 EXTENSIONS=markdown.extensions.codehilite markdown.extensions.fenced_code markdown.extensions.tables
 
+DOCS=docs internal micromosler dashboard
+
 .PHONY: open
 .SUFFIXES: .tiff .png .md .html
 
-all: docs.html internal.html micromosler.html $(PNGS)
+all: $(DOCS:%=%.html) $(PNGS)
 
 .md.html: 
 	@echo "Compiling $< into $@"
 	@$(MD) $< ${EXTENSIONS:%=-x %} -f $@
 
 clean:
-	rm -f docs.html current.html internal.html
+	rm -f $(DOCS:%=%.html)
 	rm -f img/*.png
 
 %.png:
