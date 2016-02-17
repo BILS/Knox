@@ -53,7 +53,7 @@ instructions from the
 [Openstack Liberty docs](http://docs.openstack.org/liberty/install-guide-rdo/).
 
 The public endpoints use <code
-class="special">http://knox.bils.se:`<port>`</code>.
+class="special">http://knox.bils.se:&lt;port&gt;</code>.
 
 The Firewall, on the `controller`, is <code
 class="special">iptables</code>.  We ditched `firewalld`. The relevant
@@ -228,7 +228,7 @@ Liberty allows us to select from which pool we pick when we create a
 virtual router. For example (omitting the DNS settings):
 
 ~~~~{.bash}
-source admin.rc
+source /root/openstack/admin.rc
 
 # Public Net
 neutron net-create --router:external --provider:physical_network public --provider:network_type flat public
@@ -247,13 +247,17 @@ public 10.1.0.0/16
 And as the tenant "Knox":
 
 ~~~~{.bash}
-source knox.rc
+source /root/opentack/projects/knox.rc
+source /root/opentack/users/<user>.rc
 # VLAN 10 for Knox
-neutron net-create --provider:network_type vlan --provider:physical_network vlan \
---provider:segmentation_id 10 knox-net
+neutron net-create \
+	--provider:network_type vlan \
+	--provider:physical_network vlan \
+	--provider:segmentation_id 10 \
+	knox-net
 # Create a virtual router
 neutron router-create knox-router
-# Pick an address from 10.1.0.0/16
+# Attach to external network, called public, using the local-subnet IP range
 neutron router-gateway-set --fixed-ip subnet_id=local-subnet knox-router public
 # Creates a dhcp namespace
 neutron subnet-create --name knox-subnet --gateway 192.168.10.1 --enable-dhcp knox-net 192.168.10.0/24
