@@ -44,11 +44,11 @@ attributed some random VLAN (or the one specified at creation), and
 that this VLAN must be configured in the physical switch.
 
 In order for an administrator to issue any command, she needs to
-source the tenant's `.rc` file, along with the user's `.rc` file. I
+source the tenant's `.rc` file, along with the user's `.rc` file. We
 placed the tenant files under `/root/openstack/projects` and the users
-credentials in `/root/openstack/users`. For example, I can issue
-commands for the knox tenant if I sourced
-`/root/openstack/projects/knox.rc` and `/root/openstack/users/daz.rc`
+credentials in `/root/openstack/users`. For example, in order to issue 
+commands for the `knox` tenant, we first source
+`/root/openstack/projects/knox.rc` and `/root/openstack/users/<name>.rc`
 (and yes, you can read the passwords if you have root access on Knox).
 
 >Note that we do _not_ use the `admin` tenant! We prefer to give a
@@ -130,9 +130,6 @@ Vagrant example
 ---------------
 
 Shall I write an example, and explain why we moved on to using plain bash script?
-
-![Final setup](/img/final-setup.jpeg)
-
 
 - - - 
 Frédéric Haziza <daz@bils.se>, January 2016.
