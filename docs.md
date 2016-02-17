@@ -52,8 +52,7 @@ class="special">Glance</code>, <code class="special">Nova</code> and
 instructions from the
 [Openstack Liberty docs](http://docs.openstack.org/liberty/install-guide-rdo/).
 
-The public endpoints use <code
-class="special">http://knox.bils.se:`&lt;port&gt;`</code>.
+The public endpoints use `http://knox.bils.se:<port>`.
 
 The Firewall, on the `controller`, is <code
 class="special">iptables</code>.  We ditched `firewalld`. The relevant
