@@ -15,5 +15,5 @@ If so, run it:
 Point then your browser to http://localhost or equivalent
 * Read "[How not to loose floating IPs](docs.md)"
 * Read the [internal documentation](internal.md)
-* Read the [µ-Mosler setup](micrmosler.md)
+* Read the [µ-Mosler setup](micromosler.md)
 * Read "[How to customize the dashboard](dashboard.md)"
